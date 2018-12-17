@@ -143,7 +143,13 @@ margin-right: 1em;
     height:50px;
     width: 50px;
     /* background-color:red; */
-    background-image:url("https://pp.userapi.com/c629518/v629518291/11c44/9Gzk0fCHJ6M.jpg");
+    /* background-image:url("https://pp.userapi.com/c629518/v629518291/11c44/9Gzk0fCHJ6M.jpg"); */
     background-size: 100%;
     border-radius: 50%;
 }
+.miniprofile {
+    border-radius: 50%;    /* Make it a circle */
+    margin: 0 auto;        /* Center horizontally */
+    width: 60%;            /* 60% width */
+    padding-bottom: 60%;   /* 60% height */
+  }
