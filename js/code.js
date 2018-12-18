@@ -43,7 +43,7 @@ function settings(){
     <div class="main_screen_settings_wrapper">
     <h1 class="main_screen_settings_h2">Количество пользователей</h1>
     <select name="" id="" class="main_screen_settings_select">
-        <option value="2">2</option>
+        <option value="2" class>2</option>
         <option value="3">3</option>
     </select>    
 
@@ -59,6 +59,7 @@ function settings(){
 let button2 = document.querySelector(".main_screen__greeting_button2");
 button2.onclick = settings2;
 let main_screen_settings = document.querySelector(".main_screen_settings");
+let option = document.querySelector
 
 
 
@@ -93,12 +94,8 @@ function settings2(){
     <input type="text" name="third_photo" class="third_photo">
     <button class="main_screen__greeting_button_3">Продолжить</button>
 
-    </div></div>`);
+    </div>`);
     let button3 = document.querySelector(".main_screen__greeting_button_3");
-   
-    // console.log(User1.name);
-    // console.log(User2);
-    // console.log(User3);
     button3.onclick = chat;
     let main_screen_register = document.querySelector(".main_screen_register");
 
@@ -114,10 +111,13 @@ function chat(){
     <h1 class="main_screen_chat_h1">
         Время общаться!
     <div class="main_screen_chat_wrapper">
-        <textarea  placeholder="Введите сообщение..." class="main_textarea"></textarea>
-        <button class="main_screen_chat_button_user1 success">${User1.name}</button>
-        <button class="main_screen_chat_button_user2 warning">${User2.name}</button>
-        <button class="main_screen_chat_button_user3 error">${User3.name}</button>
+        <textarea rows="7" cols="20" placeholder="Введите сообщение..." class="main_textarea"></textarea>
+
+    </div>
+    <div class="button_stack">
+    <button class="main_screen_chat_button_user1 success">${User1.name}</button>
+    <button class="main_screen_chat_button_user2 warning">${User2.name}</button>
+    <button class="main_screen_chat_button_user3 error">${User3.name}</button>
     </div>
     </h1>
 </div>
@@ -130,7 +130,7 @@ let user_button_2 = document.querySelector(".main_screen_chat_button_user2");
 let user_button_3 = document.querySelector(".main_screen_chat_button_user3");
 let text = document.querySelector(".main_textarea");
 function generic(use){
-    main_chat.insertAdjacentHTML("afterbegin", `
+    main_chat.insertAdjacentHTML("beforeEnd", `
     <div class="main_chat_message">
     <div class="main_chat_message_ava" style="background-image:url(${use.ava});"  ></div>
     <div class="main_chat_nick"> <span> ${use.name}${use.lastname}</span>
@@ -138,17 +138,21 @@ function generic(use){
 </div>`);
 main_chat_message_ava = document.querySelector(".main_chat_message_ava");
 let ava = User1.ava;
-// main_chat_message_ava.style.background = "url(${ava})";
 
 }
 user_button_1.onclick = function(){
     generic(User1);
 };
 
-function generic2(){
+
+user_button_2.onclick = function(){
+    generic(User2);
+}
+user_button_3.onclick = function(){
+    generic(User3);
+}
 
 
-    }
 }
 }
 

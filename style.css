@@ -99,20 +99,20 @@ margin-right: 1em;
 .main_screen_chat_wrapper button{
     font-size: 1vw;
     width: 100px;
-    height: 40px;
+    /* height: 40px; */
     margin-left: 15px;
     
 }
-.main_screen_chat_wrapper input{
+.main_screen_chat_wrapper textarea{
     margin:0 !important;
-    font-size: 0.8em;
-    height: 3em;
+    font-size: 0.5em !important;
+    /* height: 3em; */
 }
 .main_chat{
     background-color: #292A2F;
     color: #D3D3D4;
     width: 80%;
-    height:800px;
+    /* height:800px; */
   
 }
 .main_chat_message{
@@ -132,12 +132,12 @@ margin-right: 1em;
 .main_chat_nick span{
     color: #BF9AFD;
 }
-.main_chat_message_text{
-    
-}
+ 
+
 .main_chat_message_text,.main_chat_nick {
     font-size: 14px;
     font-family: "Bloom";
+    letter-spacing: 1.2px;
 }
 .main_chat_message_ava{
     height:50px;
@@ -147,9 +147,9 @@ margin-right: 1em;
     background-size: 100%;
     border-radius: 50%;
 }
-.miniprofile {
-    border-radius: 50%;    /* Make it a circle */
-    margin: 0 auto;        /* Center horizontally */
-    width: 60%;            /* 60% width */
-    padding-bottom: 60%;   /* 60% height */
-  }
+.button_stack button{
+    font-size: 20px;
+}
+.button_stack{
+    height: 300px;
+}
