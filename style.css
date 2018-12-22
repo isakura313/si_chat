@@ -129,10 +129,6 @@ margin-right: 1em;
     padding-left: 10px;
 
 }
-.main_chat_nick span{
-    color: #BF9AFD;
-}
- 
 
 .main_chat_message_text,.main_chat_nick {
     font-size: 14px;
@@ -152,4 +148,13 @@ margin-right: 1em;
 }
 .button_stack{
     height: 300px;
+}
+.user1{
+    color: #FF6A00;
+}
+.user2{
+    color:#4562F0;
+}
+.user3{
+    color: #9741D7;
 }

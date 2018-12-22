@@ -1,20 +1,30 @@
 class User {
-    constructor(name, lastname, ava){
+    constructor(name, lastname, ava,id){
         this.name = name;
         this.lastname = " "+lastname;
         this.ava = ava;
+        this.id = "user"+id;
     }
 }
+let audio = document.querySelector("audio");
+function play(){
+    audio.play();
+    console.log("play");
+    
+}
+function play1(){
+    audio.play();
+    console.log("play");
+    
+}
 
-
-
-// код из библиотеки
 
     
     
 let main_screen = document.querySelector(".main_screen");
 //объявление главной оберточной переменной;
-    
+
+
     window.onload = first;
     //при загрузке страницы происходит загрузка первой страницы
     function first(){
@@ -27,6 +37,7 @@ let main_screen = document.querySelector(".main_screen");
     </div>
 </div>`);
 let button1 = document.querySelector(".main_screen__greeting_button");
+
 
 let main_screen__gretings = document.querySelector(".main_screen__greeting");
 
@@ -65,7 +76,7 @@ let option = document.querySelector
 
 function settings2(){
     main_screen_settings.parentNode.removeChild(main_screen_settings);
-    main_screen.insertAdjacentHTML("afterbegin",`<<div class="main_screen_register">
+    main_screen.insertAdjacentHTML("afterbegin",`<div class="main_screen_register">
     <div class="main_screen_register_first_form">
         <h2>Первый пользователь</h2>
         <label for="first_name">Имя</label>
@@ -102,9 +113,9 @@ function settings2(){
 
 
 function chat(){
-    let User1 = new User(document.querySelector(".first_name").value,document.querySelector(".first_lastname").value, document.querySelector(".first_photo").value);
-    let User2 = new User(document.querySelector(".second_name").value,document.querySelector(".second_lastname").value, document.querySelector(".second_photo").value);
-    let User3 = new User(document.querySelector(".third_name").value,document.querySelector(".third_lastname").value, document.querySelector(".third_photo").value);
+    let User1 = new User(document.querySelector(".first_name").value,document.querySelector(".first_lastname").value, document.querySelector(".first_photo").value,1);
+    let User2 = new User(document.querySelector(".second_name").value,document.querySelector(".second_lastname").value, document.querySelector(".second_photo").value,2);
+    let User3 = new User(document.querySelector(".third_name").value,document.querySelector(".third_lastname").value, document.querySelector(".third_photo").value,3);
     main_screen_register.parentNode.removeChild(main_screen_register);
     console.log(User1.name);
     main_screen.insertAdjacentHTML("afterbegin", `<div class="main_screen_chat">
@@ -129,27 +140,43 @@ let user_button_1 = document.querySelector(".main_screen_chat_button_user1");
 let user_button_2 = document.querySelector(".main_screen_chat_button_user2");
 let user_button_3 = document.querySelector(".main_screen_chat_button_user3");
 let text = document.querySelector(".main_textarea");
-function generic(use){
+function getRandomArbitrary(min, max) {
+    return  Math.floor( Math.random() * (max - min) + min);
+  }
+function generic(use,id){
+    
     main_chat.insertAdjacentHTML("beforeEnd", `
     <div class="main_chat_message">
     <div class="main_chat_message_ava" style="background-image:url(${use.ava});"  ></div>
-    <div class="main_chat_nick"> <span> ${use.name}${use.lastname}</span>
+    <div class="main_chat_nick"> <span class="${use.id}"> ${use.name}${use.lastname}</span>
     <div class="main_chat_message_text">   ${text.value} </div></div>
 </div>`);
+
 main_chat_message_ava = document.querySelector(".main_chat_message_ava");
+main_nick = document.querySelector("span");
+const array_colors = ["#FF6A00","#9741D7","#FF3740","#4562F0","#00BA99"];
 let ava = User1.ava;
 
+
+
 }
+
+
+
+
 user_button_1.onclick = function(){
     generic(User1);
+    play();
 };
 
 
-user_button_2.onclick = function(){
+user_button_2.onclick = function(){    
     generic(User2);
+    play1();
 }
 user_button_3.onclick = function(){
     generic(User3);
+    play;
 }
 
 
@@ -158,29 +185,8 @@ user_button_3.onclick = function(){
 
 
 };
-
-
-    }
-
+}
 
 
 
-    document.addEventListener("DOMContentLoaded", function() {
-        [].forEach.call(document.querySelectorAll('.dropimage'), function(img){
-          img.onchange = function(e){
-            var inputfile = this, reader = new FileReader();
-            reader.onloadend = function(){
-              inputfile.style['background-image'] = 'url('+reader.result+')';
-            }
-            reader.readAsDataURL(e.target.files[0]);
-          }
-        });
-      });
-
-
-
-
-
-
-// Здесь у нас пойдут переменные
 
