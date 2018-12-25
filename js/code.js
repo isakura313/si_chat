@@ -6,17 +6,18 @@ class User {
         this.id = "user"+id;
     }
 }
-let audio = document.querySelector("audio");
+var audio = document.querySelector("audio");
 function play(){
     audio.play();
     console.log("play");
+   
     
+   
 }
-function play1(){
-    audio.play();
-    console.log("play");
-    
+audio.onended = function() {
+    // alert("wtf");
 }
+
 
 
     
@@ -172,11 +173,11 @@ user_button_1.onclick = function(){
 
 user_button_2.onclick = function(){    
     generic(User2);
-    play1();
+    play();
 }
 user_button_3.onclick = function(){
     generic(User3);
-    play;
+    play();
 }
 
 
