@@ -3,16 +3,20 @@
 
 @import 'css/norm.css';
 @import 'css/picnic.css';
+@import 'css/adaptive.css';
 @font-face{
     font-family:"Blooming";
     src: url("fonts/Blooming\ Elegant\ Sans.otf") format("opentype");
 }
 
 /* здесь пойдут мои собственные стили */
-.main_screen{
+body{
     background-color: #F5F5F5;
+}
+.main_screen{
+   
     width: 100vw;
-    height: 100%;
+
     display: flex;
     justify-content: center;
     text-align: center;
@@ -27,7 +31,7 @@
     height: 500px;
    
 }
-.greting__p{
+.greeting__p{
     font-family: 'PT Serif', serif;
     font-size: 1.4em;
 }
@@ -45,7 +49,7 @@
     justify-content: flex-end;
 }
 .greeting__button{
-    width: 30%;
+    /* width: 300px; */
     outline: none;
     /* font-size: 1.2em; */
     height:50px;
@@ -79,16 +83,15 @@
 .register{
     display: flex;
     padding-top: 2vw;
+    width: 80%;
+    justify-content: space-around;
 
 }
-.register_first_form,.register_second_form, .register_third_form{
-margin-left: 1em;
-margin-right: 1em;
-}
+
 .register input{
     margin-bottom: 1em;
 }
-.main_screen_chat_wrapper{
+.chat_wrapper{
     margin-top: 2em;
     display: flex;
     justify-content: space-around;

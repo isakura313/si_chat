@@ -13,7 +13,7 @@ function play2(){
     function first(){
     main_screen.insertAdjacentHTML("afterBegin", `<div class="greeting">
     <h1 class="greeting__h1">Привет!</h1>
-    <p class="greting__p">Я рад приветствовать тебя на странице «Симулятора Переписки». Здесь ты сможешь создать свой симулятор  
+    <p class="greeting__p">Я рад приветствовать тебя на странице «Симулятора Переписки». Здесь ты сможешь создать свой симулятор  
         общения нескольких  пользователей!</p>
     <div class="greeting__wrapper">
         <button class="greeting__button">Продолжить</button>
