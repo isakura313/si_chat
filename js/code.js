@@ -2,7 +2,11 @@
 let main_screen = document.querySelector(".main_screen");
 //объявление главной оберточной переменной;
 
-
+var audio2 = document.querySelector(".audio_click");
+function play2(){
+    audio2.play();
+    // тут сообщенька играет
+}
 
     window.onload = first;
     //при загрузке страницы происходит html-контента первой страницы
@@ -27,11 +31,12 @@ greeting_button.onclick = settings;
     
 
 function settings(){
+    play2();
     greetings.parentNode.removeChild(greetings);
     main_screen.insertAdjacentHTML("afterbegin", `<div class="settings">
     <h1 class="settings_h1">Первоначальные настройки</h1>
     <div class="settings_wrapper">
-    <h1 class="settings_h2">Количество пользователей</h1>
+    <h1 class="settings_h1">Количество пользователей</h1>
     <select name="" id="" class="settings_select">
         <option value="2" class="settings_select__option2">2</option>
         <option value="3" class="settings_select__option3">3</option>
@@ -55,6 +60,7 @@ let settings = document.querySelector(".settings");
 
 
 function settings2(){
+    play2();
     settings.parentNode.removeChild(settings);
     main_screen.insertAdjacentHTML("afterbegin",`<div class="register">
     <div class="register_first_form">
@@ -93,6 +99,7 @@ function settings2(){
 
 
 function chat(){
+    play2();
 // здесь происходит невероятно мощное ООП, держитесь
     let User1 = new User(document.querySelector(".first_name").value,document.querySelector(".first_lastname").value, document.querySelector(".first_photo").value,1);
     let User2 = new User(document.querySelector(".second_name").value,document.querySelector(".second_lastname").value, document.querySelector(".second_photo").value,2);
@@ -123,10 +130,9 @@ let user_button_2 = document.querySelector(".chat_button_user2");
 let user_button_3 = document.querySelector(".chat_button_user3");
 let text = document.querySelector(".chat__textarea");
 
-var audio = document.querySelector("audio");
+var audio = document.querySelector(".audio_telegram");
 function play(){
     audio.play();
-    console.log("play");
     // тут сообщенька играет
 }
 //здесь происходит генерация сообщения
