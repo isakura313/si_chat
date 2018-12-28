@@ -115,10 +115,26 @@ function chat(){
         <textarea rows="7" cols="20" placeholder="Введите сообщение..." class="chat__textarea"></textarea>
 
     </div>
+    <h5 class=""chat_h5"> Назначь время</h5>
+
+    <div class="date">
+    <form action="" name="date" class="form_date">
+   
+    <div>
+    <label for="hour">Часы</label>
+   <input type="text" name="hour" class="hour" placeholder="12">
+   </div>
+   <div>
+   <label for="minute">Минуты</label>
+   <input type="text" name="minute" class="minute" placeholder="12">
+   </div>
+   </form> 
+    </div>
     <div class="chat_button_stack button_stack">
     <button class="chat_button_user1 success">${User1.name}</button>
     <button class="chat_button_user2 warning">${User2.name}</button>
     <button class="chat_button_user3 error">${User3.name}</button>
+    <button class="change_Theme"> Сменить тему </button>
     </div>
 </div>
 <div class="main_dialog">
@@ -128,8 +144,21 @@ let main_dialog = document.querySelector(".main_dialog");
 let user_button_1 = document.querySelector(".chat_button_user1");
 let user_button_2 = document.querySelector(".chat_button_user2");
 let user_button_3 = document.querySelector(".chat_button_user3");
+let change_Theme = document.querySelector(".change_Theme");
 let text = document.querySelector(".chat__textarea");
+let hour = document.querySelector(".hour");
+let minute = document.querySelector(".minute");
 
+list_of_class = main_dialog.classList;
+change_Theme.onclick = function (){
+    if(list_of_class=="main_dialog"){
+        list_of_class.remove("main_dialog");
+        list_of_class.add("main_dialog_white");
+    } else{
+        list_of_class.remove("main_dialog_white");
+        list_of_class.add("main_dialog");
+    }
+}
 var audio = document.querySelector(".audio_telegram");
 function play(){
     audio.play();
@@ -141,8 +170,16 @@ function generic_message(use,id){
     <div class="main_dialog_message">
     <div class="main_dialog_message_ava" style="background-image:url(${use.ava});"  ></div>
     <div class="main_dialog_nick"> <span class="${use.id} main_nick"> ${use.name}${use.lastname}</span>
-    <div class="main_dialog_message_text">   ${text.value} </div></div>
-</div>`);
+    <div class="main_dialog_message_text">   ${text.value} 
+    </div>
+    <span class="time_message">${hour.value}:${minute.value}</span>    
+
+    </div>
+
+</div>
+
+
+`);
 
 main_dialog_message_ava = document.querySelector(".main_dialog_message_ava");
 main_nick = document.querySelector(".main_nick");

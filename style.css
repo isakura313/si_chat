@@ -102,27 +102,27 @@ body{
 .chat_wrapper button{
     font-size: 1vw;
     width: 100px;
-    /* height: 40px; */
     margin-left: 15px;
-    
 }
 .chat_textarea{
     margin:0 !important;
     font-size: 0.5em !important;
-    /* height: 3em; */
 }
 .main_dialog{
     background-color: #292A2F;
     color: #D3D3D4;
     width: 80%;
-    /* height:800px; */
-  
+}
+.main_dialog_white{
+    background-color: #ffffff;
+    color: #2A2A2A;
+    width: 80%;
 }
 .main_dialog_message{
     padding-left: 2em;
     padding-top: 1em;
     display: flex;
-
+    width: 300px;
 }
 .main_dialog_nick{
     display: flex;
@@ -136,21 +136,54 @@ body{
 .main_dialog_message_text,.main_dialog_nick {
     font-size: 14px;
     font-family: "Bloom";
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
 }
 .main_dialog_message_ava{
     height:50px;
     width: 50px;
-    /* background-color:red; */
-    /* background-image:url("https://pp.userapi.com/c629518/v629518291/11c44/9Gzk0fCHJ6M.jpg"); */
     background-size: 100%;
     border-radius: 50%;
 }
 .chat_button_stack button{
     font-size: 20px;
 }
+.chat_h5{
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+}
+.date{
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+}
+.form_date{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.form_date input{
+    width: 80px;
+    text-align: center;
+}
+label{
+    margin-top: 5px;
+}
+.time_message{
+    position: relative;
+    left: 387px;
+    top:-33px;
+    color: #9E9E9E;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
 .button_stack{
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.button_stack button{
+    width: 200px;
 }
 .user1{
     color: #FF6A00;
