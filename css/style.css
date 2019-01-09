@@ -1,9 +1,9 @@
 /* импорт двух важных библиотек: в одной у нас более-менее нарисован UI, в другой у нас происходит масксимально кросс-браузерный сброс стилей */
 /* посмотрим, насколько это поможет */
 
-@import 'css/norm.css';
-@import 'css/picnic.css';
-@import 'css/adaptive.css';
+@import 'norm.css';
+@import 'picnic.css';
+@import 'adaptive.css';
 @font-face{
     font-family:"Blooming";
     src: url("fonts/Blooming\ Elegant\ Sans.otf") format("opentype");
